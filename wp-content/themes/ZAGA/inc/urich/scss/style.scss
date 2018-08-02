@@ -1,0 +1,31 @@
+//Plugins
+@import "plugins/slick";         //slick slider plagin
+@import "plugins/font-awesome";
+//Modules
+@import "modules/grid";          //blocks grid
+@import "modules/menu-burger";
+@import "modules/modal";         //modal window
+@import "modules/hover-on-block";
+//Basic
+@import "basic/fonts";
+@import "basic/var";
+@import "basic/basic";
+@import "basic/mixin";          //mixin styles
+@import "basic/buttons";
+//Section
+@import "header";
+@import "footer";
+//Page
+@import "page/main";
+@import "page/project";
+@import "page/blog";
+@import "page/article";
+@import "page/contacts";
+
+/*---Styles---*/
+
+
+/*---end styles---*/
+
+//Media
+@import "media";

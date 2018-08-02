@@ -1,0 +1,45 @@
+@mixin ul-inline-not-dots{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+//FLEX
+@mixin flex($justify-content, $align-items: flex-start, $flex-direction: row, $flex-wrap: nowrap){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+}
+
+//FONTS
+//[font-size] [font-family] [line-height] [color]
+@mixin text($text-size: 16px, $text-family: $font-f1, $text-color: #000, $line-height: normal,){
+  font:$text-size $text-family;
+  line-height: $line-height;
+  color:$text-color;
+}
+
+//BUTTONS
+@mixin btn($btn-width: 170px, $btn-height: 44px, $btn-margin: 0, $btn-bg: #000, $btn-text-color: #fff, $btn-family: Arial, $btn-font-size: 16px, $btn-border-size: 1px, $btn-border-radius: 0){
+  display: block;
+  width: $btn-width;
+  height: $btn-height;
+  background-color: $btn-bg;
+  color: $btn-text-color;
+  padding: ($btn-height - $btn-font-size - $btn-border-size * 2 - 1px) / 2 15px;
+  margin: $btn-margin;
+  font-size: $btn-font-size;
+  font-family: $btn-family;
+  text-align: center;
+  border: $btn-border-size solid #fff;
+  border-radius: $btn-border-radius;
+  cursor: pointer;
+  &:hover{
+      background-color: $btn-text-color;
+      color: #000;
+      text-decoration: none;
+  }
+}

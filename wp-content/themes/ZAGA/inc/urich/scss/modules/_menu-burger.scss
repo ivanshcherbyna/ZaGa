@@ -1,0 +1,65 @@
+@import "basic/var";
+
+#menu-toggle{
+  display: none;
+  color: #fff;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  z-index: 9;
+  cursor: pointer;
+  font-size: 21px;
+  width: 20px;
+  height: 20px;
+}
+@media(max-width:768px){
+    #main-menu{
+      display: none;
+    }
+    #menu-toggle{
+      display: block;
+    }
+    #adaptive-menu{
+      display: none;
+      background-color: $color2;
+      position: absolute;
+      top: 0;
+      left: 200px;
+      width: calc(100% - 200px);
+      z-index: 3;
+        .menu{
+          list-style-type: none;
+          padding: 0;
+          width: 100%;
+          li{
+            padding-right: 50px;
+            a{
+              color: #fff;
+            }
+          }
+        }
+        .container{
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+    }
+}
+@media(max-width:600px){
+    #adaptive-menu{
+      left: 165px;
+      width: calc(100% - 165px);
+    }
+}
+@media(max-width:480px){
+    #menu-toggle{
+      right: 35px;
+    }
+    #adaptive-menu{
+      left: 110px;
+      width: calc(100% - 110px);
+      .container{
+        padding-top: 27px;
+        padding-bottom: 26px;
+      }
+    }
+}

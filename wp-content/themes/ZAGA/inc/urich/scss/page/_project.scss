@@ -1,0 +1,45 @@
+.progect-info{
+    p{
+        margin-top: 0;
+    }   
+    .image-project{
+        width: 100%;
+    }
+}
+.gallery{
+        .item{
+            height: 270px;
+            width: calc(100% / 3);
+            display: block;
+        }
+        img{
+            height: 100%;
+        }
+}
+@media(max-width:768px){
+    .blueprints{
+        img.item{
+            object-fit: contain;
+            margin-bottom: 0;
+        }
+    }
+}
+@media(max-width:480px){
+    .gallery{
+        .row{
+            .item{
+                min-height: 100px;
+                height: 150px;
+            }
+        }
+    }
+}
+@media(max-width:330px){
+    .gallery{
+        .row{
+            .item{
+                height: 140px;
+            }
+        }
+    }
+}

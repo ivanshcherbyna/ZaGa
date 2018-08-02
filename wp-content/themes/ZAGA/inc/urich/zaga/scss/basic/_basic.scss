@@ -1,0 +1,116 @@
+@import "basic/mixin";
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+HTML, body{
+    margin: 0;
+    background-color: $color2;
+}
+
+//Captions
+h1, h2, h3, h4, h5, h6{
+
+}
+.h1{
+    font-size: 36px;
+    font-family: $family1-bold;
+    color: #fff;
+    margin: 0 0 30px 0;
+    display: block;
+}
+.h2{
+    font-size: 24px;
+    font-family: $family1-bold;
+    color: #fff;
+    line-height: 1.5;
+    margin: 0 0 27px 0;
+    text-transform: uppercase;
+    display: block;
+}
+
+p{
+    font-size: 16px;
+    font-family: $family1;
+    color: #fff;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+//Links-----------------------------------
+//need to customize
+a{
+    color: $color1;
+    text-decoration: none;
+    font-family: $family1;
+    &:hover{
+        color: $color1;
+        text-decoration: underline;
+    }
+}
+
+//Img-------------------------------------
+//do not need to customize
+img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.image-block{
+    @include flex(center, center);
+    padding: 5px;
+}
+
+//Form------------------------------------
+//need to customize
+input, textarea{
+    font: 14px Arial;
+    color: #fff;
+    background-color: $color3;
+    border: 1px solid $color3;
+    padding: 15px 25px;
+    width: 100%;
+    &:focus-within, &:focus{
+        border: 1px solid #fff;
+    }
+}
+input{
+    height: 56px;
+
+}
+::placeholder{
+    color: #d5d5d5;
+}
+label{
+    font: 16px Arial;
+    color: #000;
+    cursor: pointer;
+}
+.input-field{
+    label{
+        width: 100%;
+        padding: 10px 15px;
+        display: block;
+    }
+}
+//end form
+
+//Section
+section{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media(max-width:768px){
+    section{
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+}
+
+//Padding
+.padding{
+  padding-left: 101px;
+  padding-right: 101px;
+}

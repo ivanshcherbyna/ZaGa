@@ -1,0 +1,200 @@
+header{
+    &.header1{
+      height: 700px;
+    }
+    &.header2{
+      height: 434px;
+      &:after{
+          content: '';
+          display: block;
+          background-image: linear-gradient(to bottom, rgba(43, 43, 43, 0.1), #2b2b2b);
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+      }
+    }
+    background-size: cover;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    height: 100px;
+    position: relative;
+    .logo-block{
+        z-index: 10;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 305px;
+        height: 305px;
+        background-color: $color2;
+        @include flex(flex-end);
+        .logo{
+          margin-top: 30px;
+          margin-right: 20px;
+          height: 180px;
+          width: 140px;
+          @include flex(center, center, column);
+          img{
+            width: 65px;
+          }
+          .logo-description{
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+          }
+        }
+    }
+    .container{
+        position: relative;
+        z-index: 2;
+        height: inherit;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .wrapper{
+            @include flex(flex-end, center);
+            height: 120px;
+            .menu{
+              @include ul-inline-not-dots;
+              justify-content: flex-end;
+              flex-wrap: wrap;
+              margin: 0 0 0 6%;
+              width: 900px;
+              li{
+                margin-left: 64px;
+                a{
+                  padding: 10px;
+                  margin: 5px;
+                  display: block;
+                    &.active{
+                        font-family: $family1-bold;
+                        color: #e9e2d8;
+                    }
+                }
+              }
+            }
+            .btn{
+              margin: 0;
+            }
+        }
+        .info-post{
+            width: 570px;
+            margin: 12% 14% 12% auto;
+            .h1{
+              margin-bottom: 15px;
+            }
+            .btn-more{
+              margin-top: 50px;
+            }
+        }
+    }
+}
+
+//header adaptive
+@media(max-width:1200px){
+    header{
+        &.header1{
+            height: 600px;
+        }
+        .logo-block{
+            width: 200px;
+            height: 300px;
+        }
+        .container{
+            .wrapper{
+                .menu{
+                    flex-wrap: wrap;
+                    width: 80%;
+                    li{
+                      margin-left: 5%;
+                    }
+                }
+            }
+            .info-post{
+                width: 70%;
+                margin: 50px 0px 50px auto;
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    header{
+        &.header1{
+            /*height: 500px;*/
+        }
+        &.header2{
+            height: 350px;
+        }
+        .logo-block{
+            height: 240px;
+        }
+        .container{
+            .info-post{
+                margin: 272px auto 50px auto;
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media(max-width:600px){
+    header{
+        .logo-block{
+          width: 165px;
+          .logo{
+            width: 100%;
+            margin-right: 0;
+          }
+        }
+        .container{
+            .info-post{
+                width: 100%;
+                .h1{
+                  font-size: 30px;
+                }
+                .btn-more{
+                  margin-top: 10px;
+                }
+            }
+        }
+        &.header1{
+            height: 550px;
+        }
+    }
+}
+
+@media(max-width:480px){
+    header{
+        .logo-block{
+          width: 110px;
+          height: 180px;
+          .logo{
+            margin-top: 0;
+            height: 100%;
+            img{
+              width: 50px;
+            }
+          }
+        }
+        .container{
+            .info-post{
+                margin: 210px auto 50px auto;
+            }
+        }
+        &.header1{
+            height: 520px;
+        }
+        &.header2{
+            height: 290px;
+        }
+    }
+}
+
+@media(max-width:375px){
+
+}
+
+@media(max-width:325px){
+
+}

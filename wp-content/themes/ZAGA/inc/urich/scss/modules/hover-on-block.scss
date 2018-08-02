@@ -1,0 +1,32 @@
+//Var
+$background-hover-active-block: transparent;
+$padding-hover-active-block: 30px;
+
+.hover-on-block{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .active-hover{
+      background-color: $background-hover-active-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: $padding-hover-active-block;
+      box-sizing: border-box;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+}
+@media(min-width:992px){
+  .hover-on-block{
+      &:hover{
+        .active-hover{
+          display: flex;
+        }
+      }
+  }
+}

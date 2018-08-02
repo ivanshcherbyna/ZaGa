@@ -1,0 +1,14 @@
+.btn{
+   // [width] [height] [margin] [bg-color] [text-color] [text-family] [text-size] [border-size] [border-radius]
+   &-more{
+     @include btn(170px, 44px, 0, transparent, white, $family1, 16px, 2px);
+   }
+}
+
+@media(max-width:600px){
+    .btn{
+        &-more{
+            width: 130px;
+        }
+    }
+}

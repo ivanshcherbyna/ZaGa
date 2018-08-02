@@ -1,0 +1,208 @@
+//-----------Grid adjustment ---------------------------------------------------
+
+.container{
+  width: 1170px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+//BLOCK GRID
+.row{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  // 2 column
+  &.col2{
+    > .item{
+      width: calc(100% / 2 - 15px); //margin-right / 2 * 1 = 10px;
+      margin-right: 30px;
+      margin-bottom: 20px;
+      min-height: 200px;
+      &:nth-child(2n){
+          margin-right: 0;
+      }
+    }
+  }
+  // 3 column
+  &.col3{
+    > .item{
+        width: calc(100% / 3);
+        // margin-right: 21px;
+        min-height: 270px;
+    }
+  }
+  // 4 column
+  &.col4{
+    > .item{
+        width: calc(100% / 4 - 15px); //margin-right / 4 * 3 = 15px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        min-height: 150px;
+        background-color: #c5c5c5;
+        &:nth-child(4n){
+            margin-right: 0;
+        }
+    }
+  }
+  // 5 column
+  &.col5{
+    > .item{
+        width: calc(100% / 5 - 16px); //margin-right / 5 * 4 = 16px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        min-height: 150px;
+        background-color: #c5c5c5;
+        &:nth-child(5n){
+            margin-right: 0;
+        }
+    }
+  }
+  // 6 column
+  &.col6{
+    > .item{
+        width: calc(100% / 6 - 15px); //margin-right / 6 * 5 = 15px;
+        margin-right: 18px;
+        margin-bottom: 20px;
+        min-height: 150px;
+        background-color: #c5c5c5;
+        &:nth-child(6n){
+            margin-right: 0;
+        }
+    }
+  }
+}
+@media(max-width:1200px){
+  .container{
+    width: 94%;
+  }
+}
+
+@media(min-width:769px) and (max-width:991px){
+  .row{
+    // 6 column
+    &.col6{
+      > .item{
+          width: calc(100% / 3 - 12px);
+          &:nth-child(3n){
+              margin-right: 0;
+          }
+      }
+    }
+  }
+}
+
+@media(min-width:481px) and (max-width:768px){
+  .row{
+    &.col2{
+        > .item{
+            width: 100%;
+            margin-right: 0;
+        }    
+    }
+      // 3 column
+      &.col3{
+        > .item{
+            min-height: 200px;
+        }
+      }
+    // 4 column
+    &.col4{
+      > .item{
+          width: calc(100% / 2 - 2%);
+          margin-right: 4%;
+          &:nth-child(2n){
+              margin-right: 0;
+          }
+      }
+    }
+    // 5 column
+    &.col5{
+      > .item{
+          width: calc(100% / 3 - 2%);
+          margin-right: 3%;
+          &:nth-child(3n){
+              margin-right: 0;
+          }
+      }
+    }
+    // 6 column
+    &.col6{
+      .item{
+          width: calc(100% / 3 - 2%);
+          margin-right: 3%;
+          &:nth-child(3n){
+              margin-right: 0;
+          }
+      }
+    }
+  }
+}
+
+@media(max-width: 480px){
+  .row{
+    &.col2{
+        > .item{
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 40px;
+        }    
+    }
+    // 3 column
+    &.col3{
+      > .item{
+          width: calc(100% / 2);
+          min-height: 200px;
+          /*margin-right: 4%;*/
+          &:nth-child(2n){
+              margin-right: 0;
+          }
+          /*&:nth-child(3n){
+              margin-right: 4%;
+          }*/
+      }
+    }
+    // 4 column
+    &.col4{
+      > .item{
+          width: calc(100% / 2 - 2%);
+          margin-right: 4%;
+          &:nth-child(2n){
+              margin-right: 0;
+          }
+      }
+    }
+    // 5 column
+    &.col5{
+      > .item{
+          width: calc(100% / 2 - 2%);
+          margin-right: 4%;
+          &:nth-child(2n){
+              margin-right: 0;
+          }
+          &:nth-child(3n){
+              margin-right: 4%;
+          }
+      }
+    }
+    // 6 column
+    &.col6{
+      > .item{
+          width: calc(100% / 2 - 2%);
+          margin-right: 4%;
+          &:nth-child(2n){
+              margin-right: 0;
+          }
+      }
+    }
+  }
+}
+@media(max-width:330px){
+    .row{
+        &.col3{
+            > .item{
+                min-height: 180px;
+            }
+        }
+    }
+}

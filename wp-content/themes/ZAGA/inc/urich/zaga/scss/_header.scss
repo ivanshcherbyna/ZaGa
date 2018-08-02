@@ -1,0 +1,213 @@
+header{
+    &.header1{
+      height: 700px;
+      /*&:after{
+        content: '';
+        display: block;
+        background-color: $color2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 10%;
+      }*/
+    }
+    &.header2{
+      height: 434px;
+      &:after{
+          content: '';
+          display: block;
+          background-image: linear-gradient(to bottom, rgba(43, 43, 43, 0.1), #2b2b2b);
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+      }
+    }
+    /*background-size: 90%;*/
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    height: 100px;
+    position: relative;
+    .logo-block{
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 305px;
+        height: 305px;
+        background-color: $color2;
+        @include flex(flex-end);
+        .logo{
+          margin-top: 52px;
+          margin-right: 20px;
+          height: 125px;
+          width: 140px;
+          @include flex(center, center, column);
+          img{
+            width: 65px;
+          }
+          .logo-description{
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+          }
+        }
+    }
+    .container{
+        position: relative;
+        z-index: 2;
+        height: inherit;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .wrapper{
+            @include flex(flex-end, center);
+            height: 120px;
+            .menu{
+              @include ul-inline-not-dots;
+              justify-content: flex-end;
+              flex-wrap: wrap;
+              margin: 0 0 0 6%;
+              width: 900px;
+              li{
+                margin-left: 64px;
+                a{
+                  padding: 10px;
+                  margin: 5px;
+                  display: block;
+                  color: #fff;
+                }
+              }
+            }
+            .btn{
+              margin: 0;
+            }
+        }
+        .info-post{
+            width: 570px;
+            margin: 12% 14% 12% auto;
+            .h1{
+              margin-bottom: 15px;
+            }
+            .btn-more{
+              margin-top: 50px;
+            }
+        }
+    }
+}
+
+//header adaptive
+@media(max-width:1600px){
+  header{
+      background-size: cover;
+      background-position-x: 50%;
+      &.header1{
+          /*&:after{
+            width: 15%;
+          }*/
+      }
+  }
+}
+
+@media(max-width:1200px){
+    header{
+        &.header1{
+            height: 600px;
+            /*&:after{
+              width: 10%;
+            }*/
+        }
+        .logo-block{
+            width: 200px;
+            height: 300px;
+        }
+        .container{
+            .wrapper{
+                .menu{
+                    flex-wrap: wrap;
+                    width: 80%;
+                    li{
+                      margin-left: 5%;
+                    }
+                }
+            }
+            .info-post{
+                width: 70%;
+                margin: 50px 0px 50px auto;
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    header{
+        &.header1{
+            height: 500px;
+        }
+        .container{
+            .info-post{
+                margin: 4% 0 10% auto;
+                padding: 0 6% 0 12%;
+            }
+        }
+    }
+}
+
+@media(max-width:600px){
+    header{
+        .logo-block{
+          width: 165px;
+          height: 270px;
+          .logo{
+            width: 100%;
+            margin-right: 0;
+          }
+        }
+        .container{
+            .info-post{
+                margin: 0 0 0 auto;
+                padding: 0 6% 0 12%;
+                .h1{
+                  font-size: 30px;
+                }
+                .btn-more{
+                  margin-top: 10px;
+                }
+            }
+        }
+        &.header1{
+            height: 400px;
+            /*&:after{
+              width: 5%;
+            }*/
+        }
+    }
+}
+
+@media(max-width:480px){
+    header{
+        .logo-block{
+          width: 110px;
+          height: 180px;
+          .logo{
+            margin-top: 0;
+            height: 100%;
+            img{
+              width: 50px;
+            }
+          }
+        }
+        &.header1{
+            height: 340px;
+        }
+    }
+}
+
+@media(max-width:375px){
+
+}
+
+@media(max-width:325px){
+
+}
